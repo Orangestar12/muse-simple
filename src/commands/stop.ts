@@ -24,14 +24,14 @@ export default class implements Command {
     const player = this.playerManager.get(interaction.guild!.id);
 
     if (!player.voiceConnection) {
-      throw new Error('not connected');
+      throw new Error('🔌 Not connected.');
     }
 
     if (player.status !== STATUS.PLAYING) {
-      throw new Error('not currently playing');
+      throw new Error('⏏️ Nothing playing.');
     }
 
     player.stop();
-    await interaction.reply('u betcha');
+    await interaction.reply('⏹️');
   }
 }

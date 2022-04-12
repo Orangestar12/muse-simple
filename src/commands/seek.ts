@@ -32,11 +32,11 @@ export default class implements Command {
     const currentSong = player.getCurrent();
 
     if (!currentSong) {
-      throw new Error('nothing is playing');
+      throw new Error('⏏️ Nothing playing.');
     }
 
     if (currentSong.isLive) {
-      throw new Error('can\'t seek in a livestream');
+      throw new Error('🎙️ Can\'t seek a livestream.');
     }
 
     const time = interaction.options.getString('time')!;
@@ -50,7 +50,7 @@ export default class implements Command {
     }
 
     if (seekTime > currentSong.length) {
-      throw new Error('can\'t seek past the end of the song');
+      throw new Error('⏭️ Can\'t seek past the end of the track.');
     }
 
     await Promise.all([
@@ -58,6 +58,6 @@ export default class implements Command {
       interaction.deferReply(),
     ]);
 
-    await interaction.editReply(`👍 seeked to ${prettyTime(player.getPosition())}`);
+    await interaction.editReply(`⏩ (${prettyTime(player.getPosition())})`);
   }
 }

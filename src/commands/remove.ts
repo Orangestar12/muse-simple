@@ -42,6 +42,6 @@ export default class implements Command {
 
     player.removeFromQueue(position, range);
 
-    await interaction.reply(':wastebasket: removed');
+    await interaction.reply('🗑️');
   }
 }

@@ -26,11 +26,11 @@ export default class implements Command {
     try {
       await player.back();
       await interaction.reply({
-        content: 'back \'er up\'',
+        content: '⏮️',
         embeds: player.getCurrent() ? [buildPlayingMessageEmbed(player)] : [],
       });
     } catch (_: unknown) {
-      throw new Error('no song to go back to');
+      throw new Error('⏯️ Can\'t go back any further.');
     }
   }
 }

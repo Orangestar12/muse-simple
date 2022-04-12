@@ -23,11 +23,11 @@ export default class implements Command {
     const player = this.playerManager.get(interaction.guild!.id);
 
     if (player.isQueueEmpty()) {
-      throw new Error('not enough songs to shuffle');
+      throw new Error('⚠️ Needs more songs to shuffle.');
     }
 
     player.shuffle();
 
-    await interaction.reply('shuffled');
+    await interaction.reply('🔀');
   }
 }

@@ -22,7 +22,7 @@ export default class implements Command {
     const player = this.playerManager.get(interaction.guild!.id);
 
     if (!player.getCurrent()) {
-      throw new Error('nothing is currently playing');
+      throw new Error('⏏️ Nothing playing.');
     }
 
     await interaction.reply({

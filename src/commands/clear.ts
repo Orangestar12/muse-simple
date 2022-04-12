@@ -22,6 +22,6 @@ export default class implements Command {
   public async execute(interaction: CommandInteraction) {
     this.playerManager.get(interaction.guild!.id).clear();
 
-    await interaction.reply('clearer than a field after a fresh harvest');
+    await interaction.reply('🗑️');
   }
 }

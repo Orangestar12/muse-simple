@@ -23,11 +23,11 @@ export default class implements Command {
     const player = this.playerManager.get(interaction.guild!.id);
 
     if (!player.voiceConnection) {
-      throw new Error('not connected');
+      throw new Error('⚠️ Not connected.');
     }
 
     player.disconnect();
 
-    await interaction.reply('u betcha');
+    await interaction.reply('🔌');
   }
 }
