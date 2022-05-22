@@ -25,11 +25,9 @@ model KeyValueCache {
 
 model Setting {
   guildId                        String   @id
-  invitedByUserId                String?
   playlistLimit                  Int      @default(50)
   secondsToWaitAfterQueueEmpties Int      @default(30)
   leaveIfNoListeners             Boolean  @default(true)
-  roleId                         String?
   createdAt                      DateTime @default(now())
   updatedAt                      DateTime @updatedAt
 }

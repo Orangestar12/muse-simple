@@ -1,6 +1,6 @@
 import {URL} from 'url';
 import {inject, injectable} from 'inversify';
-import spotifyURI from 'spotify-uri';
+import * as spotifyURI from 'spotify-uri';
 import Spotify from 'spotify-web-api-node';
 import {TYPES} from '../types.js';
 import ThirdParty from './third-party.js';
@@ -47,7 +47,7 @@ export default class {
       items.push(...tracksResponse.items.map(playlistItem => playlistItem.track));
     }
 
-    const tracks = this.limitTracks(items, playlistLimit).map(this.toSpotifyTrack);
+    const tracks = this.limitTracks(items.filter(i => i !== null) as SpotifyApi.TrackObjectSimplified[], playlistLimit).map(this.toSpotifyTrack);
 
     return [tracks, playlist];
   }
