@@ -1,8 +1,8 @@
-FROM node:16.13.0 AS base
+FROM node:18.7.0-slim AS base
 
 # Install ffmpeg
 RUN apt-get update && \
-    apt-get install -y ffmpeg tini && \
+    apt-get install -y ffmpeg tini libssl-dev ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
 # Install dependencies
@@ -35,4 +35,3 @@ ENV COMMIT_HASH $COMMIT_HASH
 ENV BUILD_DATE $BUILD_DATE
 
 CMD ["tini", "--", "yarn", "start"]
-
