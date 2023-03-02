@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0] - 2023-02-26
+### Added
+- Added a '/replay' to restart the current song. Alias for '/seek time: 0'
+
+## [2.1.9] - 2023-02-14
+### Fixed
+- Queueing a YouTube playlist sometimes resulted in an infinite loop
+
+## [2.1.8] - 2023-02-09
+### Changed
+- Minor message improvements
+
 ## [2.1.7] - 2022-09-19
 ### Fixed
 - Bumped ytdl-core
@@ -207,7 +219,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[unreleased]: https://github.com/codetheweb/muse/compare/v2.1.7...HEAD
+[unreleased]: https://github.com/codetheweb/muse/compare/v2.2.0...HEAD
+[2.2.0]: https://github.com/codetheweb/muse/compare/v2.1.9...v2.2.0
+[2.1.9]: https://github.com/codetheweb/muse/compare/v2.1.8...v2.1.9
+[2.1.8]: https://github.com/codetheweb/muse/compare/v2.1.7...v2.1.8
 [2.1.7]: https://github.com/codetheweb/muse/compare/v2.1.6...v2.1.7
 [2.1.6]: https://github.com/codetheweb/muse/compare/v2.1.5...v2.1.6
 [2.1.5]: https://github.com/codetheweb/muse/compare/v2.1.4...v2.1.5
