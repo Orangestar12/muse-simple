@@ -1,14 +1,16 @@
 <p align="center">
-  <img width="250" height="250" src="https://raw.githubusercontent.com/codetheweb/muse/master/.github/logo.png">
+  <!-- <img width="250" height="250" src="https://raw.githubusercontent.com/codetheweb/muse/master/.github/logo.png"> -->
+  <!-- uncomment below while editing locally -->
+  <img width="250" height="250" src=".github/logo.png" alt="Muse Simple logo">
 </p>
 
-🚨: v1.0.0 was a breaking change. Please take a look at the [release notes](https://github.com/codetheweb/muse/releases/tag/v1.0.0) for upgrade instructions
+**Muse** is a self-hosted Discord music bot for small to medium-sized Discord servers/guilds. **muse-simple** is a variant with **non-opinionated, generic text** for a formal, utilitarian vibe.
 
-------
+**muse-simple only changes strings. It does not change any functionality associated with the original Muse. Please support the original developers.**
 
-Muse is a **highly-opinionated midwestern self-hosted** Discord music bot **that doesn't suck**. It's made for small to medium-sized Discord servers/guilds (think about a group the size of you, your friends, and your friend's friends).
-
-![Hero graphic](.github/hero.png)
+<p align="center">
+ <img width="500" src=".github/hero.png" alt="Features autocomplete, the same embed system, and the same queue system.">
+ </p>
 
 ## Features
 
@@ -21,7 +23,6 @@ Muse is a **highly-opinionated midwestern self-hosted** Discord music bot **that
 - 1️⃣ Muse instance supports multiple guilds
 - 🔊 Normalizes volume across tracks
 - ✍️ Written in TypeScript, easily extendable
-- ❤️ Loyal Packers fan
 
 ## Running
 
@@ -40,11 +41,11 @@ A 64-bit OS is required to run Muse.
 
 ### Versioning
 
-The `master` branch acts as the developing / bleeding edge branch and is not guaranteed to be stable.
+The `master` branch will update to match the upstream **Muse** master branch whenever the bot breaks. You can set muse/master as an "upstream" remote if you need to update yourself.
 
-When running a production instance, I recommend that you use the [latest release](https://github.com/codetheweb/muse/releases/).
+You can use a stable version of Muse diffed against muse-simple for a guaranteed stable build.
 
-
+<!--
 ### 🐳 Docker
 
 There are a variety of image tags available:
@@ -77,7 +78,7 @@ services:
       - YOUTUBE_API_KEY=
       - SPOTIFY_CLIENT_ID=
       - SPOTIFY_CLIENT_SECRET=
-```
+``` -->
 
 ### Node.js
 
@@ -85,11 +86,10 @@ services:
 * Node.js (16.x is recommended because it's the current LTS version)
 * ffmpeg (4.1 or later)
 
-1. `git clone https://github.com/codetheweb/muse.git && cd muse`
-2. Copy `.env.example` to `.env` and populate with values
-3. I recommend checking out a tagged release with `git checkout v[latest release]`
-4. `yarn install` (or `npm i`)
-5. `yarn start` (or `npm run start`)
+1. `git clone https://github.com/Orangestar12/muse-simple.git && cd muse`
+2. Copy `.env.example` to `.env` and populate with values <!-- 3. I recommend checking out a tagged release with `git checkout v[latest release]` -->
+3. `yarn install` (or `npm i`)
+4. `yarn start` (or `npm run start`)
 
 **Note**: if you're on Windows, you may need to manually set the ffmpeg path. See [#345](https://github.com/codetheweb/muse/issues/345) for details.
 
